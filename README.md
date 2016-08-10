@@ -20,8 +20,9 @@ sudo apt-get install git-core gnupg flex bison gperf build-essential zip curl zl
 
 
 #### This sets up correct udev rules in Ubuntu so the system can connect to Android devices via USB, ADB, Fastboot.  Replace <username> with system username
+```
 $ wget -S -O - http://source.android.com/source/51-android.rules | sed "s/<username>/$USER/" | sudo tee >/dev/null /etc/udev/rules.d/51-android.rules; sudo udevadm control --reload-rules
-
+```
 #### Setup the "repo" binary. This helps download all the different repositories.
 $ mkdir -p ~/bin  
 $ curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo  
