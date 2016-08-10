@@ -42,7 +42,7 @@ $ repo init -u https://github.com/CyanogenMod/android.git -b cm-13.0
 
 #### Now add the LG Volt manifest. Pick whether or not to use the stable manifest or not. Change directory to point to .repo   folder of the source directory.  
 $ mkdir -p ~/android/.repo/local_manifest  
-$ wget -S -O https://raw.githubusercontent.com/ShapeShifter499/LG_Volt-CM_13_Manifest/master/lg_volt.xml ~/android/.repo/local_manifest/lg_volt.xml
+$ wget -S https://raw.githubusercontent.com/ShapeShifter499/LG_Volt-CM_13_Manifest/master/lg_volt.xml -O ~/android/.repo/local_manifest/lg_volt.xml
 
 #### Setup CCACHE to speed up things. Run from root of source.
 $ export USE_CCACHE=1  
