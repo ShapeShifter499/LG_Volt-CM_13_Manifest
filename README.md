@@ -44,6 +44,19 @@ $ repo init -u https://github.com/CyanogenMod/android.git -b cm-13.0
 $ mkdir -p ~/android/.repo/local_manifest  
 $ wget -S https://raw.githubusercontent.com/ShapeShifter499/LG_Volt-CM_13_Manifest/master/lg_volt.xml -O ~/android/.repo/local_manifest/lg_volt.xml
 
+#### Now grab all the source files! Run at the root of the source directory.
+$ repo sync
+
+#### Since I'm running a version 8 of java. Enable experimental OpenJDK 1.8 support in CyanogenMod 13.0 (not available in earlier version). To enable OpenJDK 1.8 support, add this line to your $HOME/.bashrc file
+export EXPERIMENTAL_USE_JAVA8=true.
+
+#### Change some git variables so the build correctly identifies who you are, run the following at the root of source. (Optional) 
+$ git config --global user.name "Your Name"  
+$ git config --global user.email "Your Email"
+
+#### Make sure the environment is setup
+$ source build/envsetup.sh  
+
 #### Setup CCACHE to speed up things. Run from root of source.
 $ export USE_CCACHE=1  
 $ export CCACHE_DIR=/<path_of_your_choice>/.ccache  
@@ -55,18 +68,7 @@ export USE_CCACHE=1
 #### Monitor CCACHE being used, run from root of source.
 $ watch -n1 -d prebuilts/misc/linux-x86/ccache/ccache -s
 
-#### Now grab all the source files! Run at the root of the source directory.
-$ repo sync
-
-#### Since I'm running a version 8 of java. Enable experimental OpenJDK 1.8 support in CyanogenMod 13.0 (not available in earlier version). To enable OpenJDK 1.8 support, add this line to your $HOME/.bashrc file
-export EXPERIMENTAL_USE_JAVA8=true.
-
-#### Change some git variables so the build correctly identifies who you are, run the following at the root of source. (Optional) 
-$ git config --global user.name "Your Name"  
-$ git config --global user.email "Your Email"
-
 #### Now build! Run commands at root of source.
-$ source build/envsetup.sh  
 $ breakfast  
 $ lunch x5-userdebug
 $ mka bacon
