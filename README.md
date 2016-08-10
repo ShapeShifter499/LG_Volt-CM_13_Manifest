@@ -59,7 +59,8 @@ $ source build/envsetup.sh
 
 #### Setup CCACHE to speed up things. Run from root of source.
 $ export USE_CCACHE=1  
-$ export CCACHE_DIR=/<path_of_your_choice>/.ccache  
+$ mkdir .ccache
+$ export CCACHE_DIR=.ccache  
 $ prebuilts/misc/linux-x86/ccache/ccache -M 50G
 
 #### Make sure CCACHE will always be used. Put the following in your .bashrc (or equivalent)
