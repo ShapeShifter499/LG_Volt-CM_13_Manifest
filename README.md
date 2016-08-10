@@ -16,8 +16,7 @@ sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade && sudo
 
 sudo update-alternatives --config java
 
-sudo apt-get install git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z-dev lib32z1-dev ccache libgl1-mesa-dev libxml2-utils xsltproc unzip python-networkx android-tools-adb android-tools-fastboot maven libcurl4-openssl-dev nss-updatedb
-
+sudo apt-get install git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z-dev lib32z1-dev ccache libgl1-mesa-dev libxml2-utils xsltproc unzip python-networkx android-tools-adb android-tools-fastboot maven libcurl4-openssl-dev nss-updatedb schedtool bc libpcre16-3 libpcre3-dev libpcre32-3 libpcrecpp0v5 libc++-dev clang checkpolicy libwxgtk3.0-dev libc++abi-dev
 
 #### This sets up correct udev rules in Ubuntu so the system can connect to Android devices via USB, ADB, Fastboot.  Replace "username" with system username
 ```
@@ -70,6 +69,6 @@ export USE_CCACHE=1
 $ watch -n1 -d prebuilts/misc/linux-x86/ccache/ccache -s
 
 #### Now build! Run commands at root of source.
-$ breakfast  
-$ lunch x5-userdebug  
+$ breakfast cm_x5-userdebug  
+$ lunch cm_x5-userdebug  
 $ mka bacon
