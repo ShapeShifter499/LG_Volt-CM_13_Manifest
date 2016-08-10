@@ -16,9 +16,9 @@ sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade && sudo
 
 sudo update-alternatives --config java
 
-sudo apt-get install git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z-dev ccache libgl1-mesa-dev libxml2-utils xsltproc unzip
+sudo apt-get install git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z-dev lib32z1-dev ccache libgl1-mesa-dev libxml2-utils xsltproc unzip python-networkx android-tools-adb android-tools-fastboot maven libcurl4-openssl-dev nss-updatedb
 
-sudo apt-get install python-networkx
+
 
 #### This sets up correct udev rules in Ubuntu so the system can connect to Android devices via USB, ADB, Fastboot.  Replace <username> with system username
 $ wget -S -O - http://source.android.com/source/51-android.rules | sed "s/<username>/$USER/" | sudo tee >/dev/null /etc/udev/rules.d/51-android.rules; sudo udevadm control --reload-rules
@@ -60,6 +60,10 @@ $ repo sync
 
 #### Since I'm running a version 8 of java. Enable experimental OpenJDK 1.8 support in CyanogenMod 13.0 (not available in earlier version). To enable OpenJDK 1.8 support, add this line to your $HOME/.bashrc file
 export EXPERIMENTAL_USE_JAVA8=true.
+
+#### Change some git variables so the build correctly identifies who you are, run the following at the root of source. (Optional) 
+$ git config --global user.name "Your Name"  
+$ git config --global user.email "Your Email"
 
 #### Now build! Run commands at root of source.
 $ source build/envsetup.sh  
