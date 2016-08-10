@@ -70,5 +70,5 @@ $ watch -n1 -d prebuilts/misc/linux-x86/ccache/ccache -s
 
 #### Now build! Run commands at root of source.
 $ breakfast  
-$ lunch x5-userdebug
+$ lunch x5-userdebug  
 $ mka bacon
