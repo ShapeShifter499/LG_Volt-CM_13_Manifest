@@ -69,6 +69,5 @@ export USE_CCACHE=1
 $ watch -n1 -d prebuilts/misc/linux-x86/ccache/ccache -s
 
 #### Now build! Run commands at root of source.
-$ breakfast cm_x5-userdebug  
 $ lunch cm_x5-userdebug  
 $ mka bacon
