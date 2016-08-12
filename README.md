@@ -47,7 +47,7 @@ $ wget -S https://raw.githubusercontent.com/ShapeShifter499/LG_Volt-CM_13_Manife
 $ repo sync
 
 #### Since I'm running a version 8 of java. Enable experimental OpenJDK 1.8 support in CyanogenMod 13.0 (not available in earlier version). To enable OpenJDK 1.8 support, add this line to your $HOME/.bashrc file
-export EXPERIMENTAL_USE_JAVA8=true.
+export EXPERIMENTAL_USE_JAVA8=true
 
 #### Change some git variables so the build correctly identifies who you are, run the following at the root of source. (Optional) 
 $ git config --global user.name "Your Name"  
