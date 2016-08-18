@@ -71,3 +71,6 @@ $ watch -n1 -d prebuilts/misc/linux-x86/ccache/ccache -s
 #### Now build! Run commands at root of source.
 $ lunch cm_x5-userdebug  
 $ mka bacon
+
+#### To build just the boot.img
+$ mka bootimage
