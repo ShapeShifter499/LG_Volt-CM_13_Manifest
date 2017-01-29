@@ -1,4 +1,4 @@
-# DO NOT BUILD, LineageOS 14.1 manifest is not ready for LG Volt yet. Build Lineage 13.0 instead.
+# DO NOT BUILD, LineageOS 14.1 manifest is not ready for LG Volt yet. Build LineageOS 13.0 instead.
 
 # LG_Volt-LineageOS_14.1_Manifest
 Manifest needed to help build LineageOS 14.1 for LG Volt
