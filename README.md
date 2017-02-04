@@ -77,6 +77,3 @@ $ mka bacon
 
 #### To build just the boot.img
 $ mka bootimage
-
-### Make sure things are clean before build
-$ mka clobber
