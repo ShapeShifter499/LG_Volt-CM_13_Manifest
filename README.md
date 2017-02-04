@@ -1,5 +1,3 @@
-# DO NOT BUILD, LineageOS 14.1 manifest is not ready for LG Volt yet. Build LineageOS 13.0 instead.
-
 # LG_Volt-LineageOS_14.1_Manifest
 Manifest needed to help build LineageOS 14.1 for LG Volt
 
@@ -76,6 +74,3 @@ $ mka bacon
 
 #### To build just the boot.img
 $ mka bootimage
-
-### Make sure things are clean before build
-$ mka clobber
