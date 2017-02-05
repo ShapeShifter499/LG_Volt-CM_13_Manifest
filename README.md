@@ -65,6 +65,16 @@ export USE_CCACHE=1
 #### Monitor CCACHE being used, run from root of source.
 $ watch -n1 -d prebuilts/misc/linux-x86/ccache/ccache -s
 
+#### Configure jack
+Jack is the new Java compiler used from Lineage 14. It is known to run out of memory - a simple fix is to run this command:
+```
+$ export ANDROID_JACK_VM_ARGS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4G"
+```
+Adding that command to your ~/.bashrc file will automatically configure Jack to allocate a sufficient amount of memory.
+
+#### SuperSU Root
+Home builders that want to bake su back into the ROM can use the command ‘export WITH_SU=true’ prior to building.
+
 ### Make sure things are clean before build
 $ mka clobber
 
